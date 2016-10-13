@@ -22,16 +22,16 @@
   (= false (= \c "c"))
 
   "What if you only wanted to get part of a string?"
-  (= "World" (subs "Hello World" 7))
+  (= "World" (subs "Hello World" 6 11))
 
   "How about joining together elements in a list?"
   (= "123" (string/join '(1 2 3)))
 
   "What if you wanted to separate them out?"
-  (= "1, 2, 3" (string/join "," '(1 2 3)))
+  (= "1, 2, 3" (string/join ", " '(1 2 3)))
 
   "Maybe you want to separate out all your lines"
-  (= [1 2 3] (string/split-lines "1\n2\n3"))
+  (= ["1" "2" "3"] (string/split-lines "1\n2\n3"))
 
   "You may want to make sure your words are backwards"
   (= "olleh" (string/reverse "hello"))
@@ -67,4 +67,4 @@
   (= true (string/blank? " \n \t  "))
 
   "However, most strings aren't blank"
-  (= false (string/blank? "hello?\nare you out there?")))
+  (= false (string/blank? "hello?\nare you out there?"))) 
